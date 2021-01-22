@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectAreaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/RR_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/back"
+                android:layout_width="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Area"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/_16sdp"/>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:background="@drawable/whiteeditround">
+
+        <ImageView
+            android:id="@+id/img_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@mipmap/search"
+            app:tint="@color/black"/>
+
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_toRightOf="@+id/img_password"
+            android:background="@null"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/_13sdp" />
+
+
+
+    </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="25dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/roundbttn_register"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bttn_Sedn"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/location"
+        android:text="@string/use_my_current_location"
+        android:textAllCaps="false"
+        android:drawablePadding="@dimen/_20sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

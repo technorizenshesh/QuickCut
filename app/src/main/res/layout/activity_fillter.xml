@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FillterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linear_btn"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/linear_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:onClick="OnfillterAppyBtn"
+                android:src="@mipmap/back_arrow" />
+
+
+            <TextView
+                android:id="@+id/img_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:gravity="center"
+                android:text="@string/fillter"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/RR_toolbar"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_60sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salon_category"
+                        android:textColor="@color/color_Dblue"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/male" />
+
+                        <RadioButton
+                            android:id="@+id/radioFeMale"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/female" />
+
+                        <RadioButton
+                            android:id="@+id/radioUnisex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/unisex" />
+
+
+                    </RadioGroup>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/dash_line" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/mileage"
+                        android:textColor="@color/color_Dblue"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:isb_indicator_color="@color/colorpurple"
+                        app:isb_indicator_text_color="@color/white"
+                        app:isb_indicator_text_size="18sp"
+                        app:isb_progress="25"
+                        app:isb_show_indicator="circular_bubble"
+                        app:isb_show_tick_texts="true"
+                        app:isb_thumb_color="@color/colorpurple"
+                        app:isb_thumb_size="20dp"
+                        app:isb_tick_texts_color="@color/colorpurple"
+                        app:isb_tick_texts_size="15sp"
+                        app:isb_ticks_count="2"
+                        app:isb_track_background_color="@color/colorGray"
+                        app:isb_track_background_size="2dp"
+                        app:isb_track_progress_color="@color/colorpurple"
+                        app:isb_track_progress_size="4dp" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/dash_line" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/rating"
+                        android:textColor="@color/color_Dblue"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progressTint="@color/color_yellow"
+                        android:rating="3" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/dash_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/sort"
+                        android:textColor="@color/color_Dblue"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+
+                    <RadioGroup
+                        android:id="@+id/radio_grp2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioPopular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/popular" />
+
+                        <RadioButton
+                            android:id="@+id/radioFerecent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/recent" />
+
+                        <RadioButton
+                            android:id="@+id/radioNearby"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layoutDirection="rtl"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:text="@string/nearby" />
+
+
+                    </RadioGroup>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/dash_line" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="@string/price"
+                        android:textColor="@color/color_Dblue"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/minimum"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:hint="$60"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/whiteSecond"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="@string/maximum"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"></TextView>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:hint="$60"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/whiteSecond"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/purple_200"
+            android:onClick="OnfillterAppyBtn"
+            android:padding="@dimen/_20sdp"
+            android:text="@string/reset"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/purple_200"
+            android:onClick="OnfillterAppyBtn"
+            android:padding="@dimen/_20sdp"
+            android:text="@string/apply"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
